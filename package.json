@@ -60,7 +60,7 @@
         "build:dev": "concurrently npm:build:node npm:build:web",
         "preversion": "npm run test",
         "postversion": "npm run build:all && npm run build:dts",
-        "prepare": "is-ci || husky install"
+        "prepare": "npm run build:all"
     },
     "lint-staged": {
         "*.{js,ts}": [
